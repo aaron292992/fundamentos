@@ -1,0 +1,8 @@
+#include <iostream> // librerias
+using namespace std;
+int main()
+{
+    cout <<"Hola mundo aaron alba";
+
+    return 0;
+}
