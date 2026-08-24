@@ -1,0 +1,19 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+int main()
+{
+    float a, b ,c;
+    double x1, x2;
+    cout<< "ingrese el valor de a: ";
+    cin>> a;
+    cout<< "ingrese el valor de b: ";
+    cin>> b; 
+    cout<< "ingrese el valor de c: ";
+    cin>> c;
+    x1=(-b+(sqrt(b*b) - 4*a*c)) / 2*a;
+    x2=(-b-(sqrt(b*b) - 4*a*c)) / 2*a;
+    cout<<endl<< "raiz de x1: "<<x1<<endl;
+    cout<< "raiz de x2: "<<x2;
+     return 0;
+}
