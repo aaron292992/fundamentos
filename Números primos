@@ -1,0 +1,30 @@
+#include 
+#include 
+
+using namespace std;
+
+// Función para verificar si un número es primo
+bool esPrimo(int n) {
+    if (n < 2) {
+        return false;
+    }
+    int limite = sqrt(n);
+    for (int i = 2; i <= limite; i++) {
+        if (n % i == 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+int main() {
+    int numero = 29;
+    
+    if (esPrimo(numero)) {
+        cout << "El número " << numero << " es primo." << endl;[cite: 1]
+    } else {
+        cout << "El número " << numero << " no es primo." << endl;[cite: 1]
+    }
+    
+    return 0;
+}
