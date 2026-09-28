@@ -1,0 +1,41 @@
+#include 
+#include 
+
+using namespace std;
+ 
+bool esPrimo(int n) {
+    if (n <= 1) return false;
+    for (int i = 2; i <= sqrt(n); i++) {
+        if (n % i == 0) {
+            return false;
+        }
+    }
+    return true; 
+}
+
+int main() {
+    int N;
+    cout << "Ingrese la cantidad de numeros primos (N): ";
+    cin >> N;
+
+    if (N <= 0) {
+        cout << "Por favor, ingrese un entero positivo mayor que cero." << endl;
+        return 0;
+    }
+
+    int contador = 0;
+    int numero = 2;
+
+    cout << "Los primeros " << N << " numeros primos son: ";
+    
+    while (contador < N) {
+        if (esPrimo(numero)) {
+            cout << numero << " ";
+            contador++;
+        }
+        numero++;
+    }
+    
+    cout << endl;
+    return 0;
+}
