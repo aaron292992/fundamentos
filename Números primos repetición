@@ -1,0 +1,52 @@
+#include 
+#include 
+#include 
+
+using namespace std;
+
+bool esPrimo(int n) {
+    if (n < 2) {
+        return false;
+    }
+    int limite = sqrt(n);
+    for (int i = 2; i <= limite; i++) {
+        if (n % i == 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+int main() {
+    int N;
+    cout << "Ingrese un entero positivo N: ";[cite: 1]
+    cin >> N;
+
+    if (N <= 0) {
+        cout << "Por favor, ingrese un número mayor a 0." << endl;
+        return 0;
+    }
+
+    vector primos;
+    int numero = 2;
+
+    // Buscamos hasta juntar N números primos
+    while (primos.size() < N) {
+        if (esPrimo(numero)) {
+            primos.push_back(numero);
+        }
+        numero++;
+    }
+
+    // Mostramos los resultados en pantalla con el formato requerido
+    cout << "Los primeros " << N << " números primos son: ";[cite: 1]
+    for (size_t i = 0; i < primos.size(); i++) {
+        cout << primos[i];
+        if (i < primos.size() - 1) {
+            cout << ", ";
+        }
+    }
+    cout << endl;
+
+    return 0;
+}
