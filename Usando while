@@ -1,0 +1,16 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int cont, N; // cont=0
+    cout<<"ingrese el numero de veces a repetir: ";
+    cin>>N;
+    cont=0;
+    while (cont<N) {
+        cont=cont+1; //cont++
+    } 
+    cout <<"el valor del contador es: "<<cont;
+    return 0;
+}
