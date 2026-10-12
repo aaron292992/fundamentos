@@ -1,0 +1,34 @@
+#include <iostream>
+
+using namespace std;
+
+void menu();
+void calcularEnvio(float peso);
+
+int main() {
+    float pesoPaquete;
+    
+    cout << "=== EMPRESA DE TRANSPORTE ===" << endl;
+    cout << "Ingrese el peso del paquete en kilogramos: ";
+    cin >> pesoPaquete;
+    
+    // Llamamos a la función void que procesa y muestra el resultado
+    calcularEnvio(pesoPaquete);
+    
+    return 0;
+}
+
+void calcularEnvio(float peso) {
+    if (peso > 0 && peso <= 2) {
+        cout << "Costo del envio: Bs. 15" << endl; // Hasta 2 kg
+    } 
+    else if (peso > 2 && peso <= 5) {
+        cout << "Costo del envio: Bs. 25" << endl; // Más de 2 kg y hasta 5 kg[cite: 2]
+    } 
+    else if (peso > 5 && peso <= 10) {
+        cout << "Costo del envio: Bs. 40" << endl; // Más de 5 kg y hasta 10 kg[cite: 2]
+    } 
+    else {
+        cout << "El peso ingresado esta fuera de los rangos permitidos." << endl;
+    }
+}
