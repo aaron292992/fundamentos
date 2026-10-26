@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int duplicar(int valor) {
+    valor = valor * 2;
+    return valor;
+}
+
+int combinar(int a, int b) {
+    int resultado = duplicar(a) + b;
+    return resultado;
+}
+
+void ajustar(int &dato, int cambio) {
+    dato = dato - cambio;
+    cambio = cambio + 4;
+}
+
+int main() {
+    int x = 5, y = 2;
+
+    int total = combinar(x, y);
+    cout << x << " " << y << " " << total << endl;
+
+    ajustar(x, y);
+    cout << x << " " << y << endl;
+
+    return 0;
+}
